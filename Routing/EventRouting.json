@@ -1,0 +1,50 @@
+{
+	"Controller" : "EventController",
+	"routings" : [
+		{
+			"method" : "POST",
+			"path_length" : "1",
+			"router" : [
+				"event"
+			],
+			"params" : [],
+			"handler" : "createEvent"
+		},
+		{
+			"method" : "GET",
+			"path_length" : "1",
+			"router" : [
+				"event"
+			],
+			"params" : [],
+			"handler" : "getEventList"
+		},
+		{
+			"method" : "PUT",
+			"path_length" : "2",
+			"router" : [
+				"event"
+			],
+			"params" : [ "id" ],
+			"handler" : "updateEvent"
+		},
+		{
+			"method" : "DELETE",
+			"path_length" : "2",
+			"router" : [
+				"event"
+			],
+			"params" : [ "id" ],
+			"handler" : "deleteEvent"
+		},
+		{
+			"method" : "GET",
+			"path_length" : "2",
+			"router" : [
+				"event"
+			],
+			"params" : [ "id" ],
+			"handler" : "getEvent"
+		}
+	]
+}

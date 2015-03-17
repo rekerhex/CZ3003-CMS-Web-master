@@ -1,0 +1,14 @@
+{
+	"Controller" : "UIController",
+	"routings" : [
+		{
+			"method" : "GET",
+			"path_length" : "1",
+			"router" : [
+				"call-operator"
+			],
+			"params" : [],
+			"handler" : "getCallOperatorUI"
+		}
+	]
+}

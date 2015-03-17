@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>CMS - Decision Maker</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="">
+		
+		<!-- Bootstrap & jQuery -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+		<script src="/CMS/UI/js/bootstrap.min.js"></script>
+		<script src="/CMS/UI/js/getEventList.js"></script>
+		<script src="/CMS/UI/js/createform.js"></script>
+
+	    <link href="/CMS/UI/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="/CMS/UI/css/bootstrap-theme.min.css" rel="stylesheet">
+	    <link href="/CMS/UI/css/style.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<div class="container theme-showcase" role="main">
+
+			<div class="jumbotron">
+				<h1>CMS</h1>
+				<p>Decision Maker</p>
+			</div>
+
+			<div class="container-fluid"> <div class = "row">
+				<div id = "event-container" class = "col-sm-4"> 
+					<div class="page-header">
+			        	<h1>Event/Emergency
+			        	</h1>
+			        	
+			      	</div>
+			      	<div class="panel panel-info">
+				      	<div class="panel-body">
+
+				      		<div class="form-group">
+								<label class="control-label col-sm-3" > Filter:</label>
+								<div class="col-sm-9"> 
+
+									<div class="checkbox">
+										<div class = "row">
+										  <label class = "col-sm-6"><input type="checkbox">Event</label>
+										  <label class = "col-sm-6"><input type="checkbox" >Emergency</label>
+										</div>
+										<div class = "row">
+										  <label class = "col-sm-6"><input type="checkbox">Verified</label>
+										  <label class = "col-sm-6"><input type="checkbox">Unverified</label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<table class="table table-striped" id ="event-list">
+								<tbody>
+								<tr>
+									<td>Event 1</td>
+								</tr>
+								<tr>
+									<td>Event 2</td>
+								</tr>
+								<tr>
+									<td>Event 3</td>
+								</tr>
+								
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div id = "event-form" class = "col-sm-8"> 
+
+					<form id="event-form" class="form-horizontal" role="form" action="" method="">
+						<div class="page-header">
+			        		<h1>Report Details</h1>
+			      		</div>
+
+			      		<div class="panel panel-info">
+					      	<div class="panel-body">
+
+					      		<div class="form-group">
+									<label for="name" class="control-label col-sm-3" > Verify: </label>	
+									<div class="col-sm-9"> 
+										
+									</div>
+								</div>
+
+
+					      		<div class="form-group">
+									<label for="name" class="control-label col-sm-3" > Name: </label>	
+									<div class="col-sm-9"> 
+										<input type="text" id="fullname"  class="form-control" value="">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="mobile" class="control-label col-sm-3" > Mobile Number: </label>
+									<div class="col-sm-9"> 
+										<input type="text" id="mobile" value=""  class="form-control" >
+									</div>
+								</div> 
+
+								<div class="form-group">
+									<label for="address" class="control-label col-sm-3" > Address: </label>
+									<div class="col-sm-9"> 
+										<input type="text" id="address" value=""  class="form-control" >
+									</div>
+								</div> 
+
+								<div class="form-group">
+									<label for="nric" class="control-label col-sm-3" > NRIC: </label>
+									<div class="col-sm-9"> 
+										<input type="text" id="nric" value=""  class="form-control" >
+									</div>
+								</div> 
+								
+
+								<div class="form-group">
+									<label for="event-type" class="control-label col-sm-3" > Event type: </label>
+									<div class="col-sm-9"> 
+										<label class="radio-inline"><input type="radio" name="event-type" value ="fire">Fire</label>
+										<label class="radio-inline"><input type="radio" name="event-type" value ="haze">Haze</label>
+									</div>
+								</div> 
+
+								<div class="form-group">
+									<label for="event-location" class="control-label col-sm-3" > Event location:</label>
+									<div class="col-sm-9"> 
+										<select class="form-control" id="event-location">
+											<option>District 1</option>
+											<option>District 2</option>
+											<option>District 3</option>
+											<option>District 4</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="event-location" class="control-label col-sm-3" > Other details:</label>
+									<div class="col-sm-9"> 
+										<textarea class="form-control" rows="3" id="other-details"></textarea>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="assistance-request" class="control-label col-sm-3" > Assistance request:</label>
+									<div class="col-sm-9"> 
+										<div class="checkbox">
+										  <label><input type="checkbox" value="">Ambulance</label>
+										</div>
+										<div class="checkbox">
+										  <label><input type="checkbox" value="">Fire fighter</label>
+										</div>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="exact-location" class="control-label col-sm-3" >Exact Location</label>
+									<div class="col-sm-9"> 
+										<textarea class="form-control" rows="3" id="exact-location"></textarea>
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="solution" class="control-label col-sm-3" > Solution:</label>
+									<div class="col-sm-9"> 
+										<textarea class="form-control" rows="3" id="solution"></textarea>
+									</div>
+								</div>
+
+								<div class="container-fluid"> <div class = "row">
+									<center class = "col-sm-4"><button type="button" class="btn btn-lg btn-danger wide-button">Emergency</button></center>
+									<center class = "col-sm-4"><button type="button" class="btn btn-lg btn-warning wide-button">Delete</button></center>
+									<center class = "col-sm-4"><button type="submit" class="btn btn-lg btn-success wide-button">Update</button></center>
+								</div> </div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div> </div>
+
+		</div>
+
+	</body>
+
+</html>

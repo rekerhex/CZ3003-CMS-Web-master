@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready( function() {
+				$.ajax( {
+					url: "server.php",
+					method: "GET",
+					data: "data=list-year",
+					success: function(result) {
+						for( var i = 0; i < result.length; i++ ) {
+							var $li = $("<li></li>");
+							$li.text(result[i]);
+							$("ul").append($li);
+						}
+					}
+				} );
+			});
+		</script>
+		<style>
+
+		</style>
+	</head>
+	<body>
+		<div> Year List: </div>
+		<ul>
+		</ul>
+	</body>
+</html>

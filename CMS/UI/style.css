@@ -1,0 +1,31 @@
+*{
+	border: 2px solid;
+}
+
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.jumbotron {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+ }
+
+.list-group-item :hover{
+    background-color: blue;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.theme-showcase .navbar .container {
+  width: auto;
+}
